@@ -1,17 +1,24 @@
+@font-face {
+  font-family: Red Hat Text;
+  src: url(../../../assets/fonts/RedHatText-Medium.ttf) format("opentype");
+}
+
 .header{
+  margin: auto;
   width:1440px;
   height: 200px;
   align-items: center;
   font-size: 14px;
   background-image: url("../../../assets/images/bg-stars.svg");
   background-color: currentColor;
-
 }
 
 .title{
   color: white;
-  font-family: 'Red Hat Text';
   font-weight: 700;
+  font-family: 'Red Hat Text';
+  letter-spacing: 5px;
+  font-size:14px !important;
 
 }
 

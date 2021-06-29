@@ -1,5 +1,6 @@
 .main_Timer {
-  position: absolute;
+  position: relative;
+  margin: auto;
 }
 
 .time {
@@ -9,7 +10,7 @@
 .time span,
 .time_reflection span,
 .time_prev span {
-  color: white;
+  color: hsl(345, 95%, 68%);
   font-size: 120px;
   background-color: #252525;
   border-radius: 10px;
@@ -31,7 +32,6 @@
 
 .line_hor {
   position: absolute;
-  background-color: white;
   width: 650px;
   height: 2px;
   margin-top: -72px;
@@ -111,4 +111,16 @@
 .min:nth-child(2n),
 .sec:nth-child(2n) {
   margin-right: 25px;
+  color:hsl(345, 95%, 68%);
+}
+
+.header{
+  margin: auto;
+  width:1440px;
+  height: 200px;
+  align-items: center;
+  font-size: 14px;
+  background-image: url("../../../assets/images/bg-stars.svg");
+  background-color: currentColor;
+
 }
