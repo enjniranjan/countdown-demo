@@ -3,6 +3,14 @@
   src: url(../../../assets/fonts/RedHatText-Medium.ttf) format("opentype");
 }
 
+@media screen and (max-width: 375px) {
+  header {
+    display: none;
+  }
+}
+
+@media screen and (orientation: landscape) {
+
 .header{
   margin: auto;
   width:1440px;
@@ -11,6 +19,7 @@
   font-size: 14px;
   background-image: url("../../../assets/images/bg-stars.svg");
   background-color: currentColor;
+}
 }
 
 .title{
