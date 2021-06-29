@@ -1,6 +1,41 @@
-<div class="timer header">
-    <span class="title"> {{daysToDday}} </span>
-    <span class="title"> {{hoursToDday}} </span>
-    <span class="title"> {{minutesToDday}} </span>
-    <span class="title"> {{secondsToDday}} </span>
+<ng-container *ngIf="timer$ |async as timer">
+  <div>
+  <div class="main_Timer">
+    <div class="clock">
+      <div class="time">
+        <span class="days">{{timer[0].value}}</span>
+        <span class="days">{{timer[1].value}}</span>
+        <span class="hours">{{timer[2].value}}</span>
+        <span class="hours">{{timer[3].value}}</span>
+        <span class="min">{{timer[4].value}}</span>
+        <span class="min">{{timer[5].value}}</span>
+        <span class="sec">{{timer[6].value}}</span>
+        <span class="sec">{{timer[7].value}}</span>
+      </div>
+    </div>
+    <div class="perspective">
+      <div class="time_reflection">
+        <span class="days" [@flip]="timer[0].value">{{timer[0].value}}</span>
+        <span class="days" [@flip]="timer[1].value">{{timer[1].value}}</span>
+        <span class="hours" [@flip]="timer[2].value">{{timer[2].value}}</span>
+        <span class="hours" [@flip]="timer[3].value">{{timer[3].value}}</span>
+        <span class="min" [@flip]="timer[4].value">{{timer[4].value}}</span>
+        <span class="min" [@flip]="timer[5].value">{{timer[5].value}}</span>
+        <span class="sec" [@flip]="timer[6].value">{{timer[6].value}}</span>
+        <span class="sec" [@flip]="timer[7].value">{{timer[7].value}}</span>
+      </div>
+    </div>
+    <div class="time_prev">
+      <span class="days">{{timer[0].old}}</span>
+      <span class="days">{{timer[1].old}}</span>
+      <span class="hours">{{timer[2].old}}</span>
+      <span class="hours">{{timer[3].old}}</span>
+      <span class="min">{{timer[4].old}}</span>
+      <span class="min">{{timer[5].old}}</span>
+      <span class="sec">{{timer[6].old}}</span>
+      <span class="sec">{{timer[7].old}}</span>
+    </div>
+    <div class="line_hor"></div>
+  </div>
 </div>
+</ng-container>

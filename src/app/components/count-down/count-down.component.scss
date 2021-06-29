@@ -1,34 +1,114 @@
-.timer {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 1.4em;
-    letter-spacing: -1px;
-  }
-  .timer span {
-    font-size: 2em;
-    margin: 0 3px 0 15px;
-  }
-
-  .header{
-  width:1440px;
-  height: 200px;
-  align-items: center;
-  font-size: 14px;
-  background-image: url("../../../assets/images/bg-stars.svg");
-  background-color: currentColor;
-
+.main_Timer {
+  position: absolute;
 }
 
-.title{
+.time {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.time span,
+.time_reflection span,
+.time_prev span {
   color: white;
-  font-family: 'Red Hat Text';
-  font-weight: 700;
-
+  font-size: 120px;
+  background-color: #252525;
+  border-radius: 10px;
+  padding: 5px 10px 0px 10px;
+  transition: 0.4s;
+  text-align: center;
+  margin-right: 3px;
 }
 
-.center {
+@keyframes time {
+  0% {
+    filter: brightness(70%);
+  }
+  90%,
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+.line_hor {
+  position: absolute;
+  background-color: white;
+  width: 650px;
+  height: 2px;
+  margin-top: -72px;
+  z-index: 10;
+}
+
+.perspective {
+  position: absolute;
+  perspective: 1400px;
+  perspective-origin: 10% 0;
+  z-index: 5;
+  margin-top: -143px;
+}
+
+.perspective .time_reflection {
+  position: absolute;
+  transform-style: preserve-3d;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+}
+
+.time_reflection span {
+  display: inline-block;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.time_prev {
+  display: flex;
+  margin-top: -143px;
+  position: absolute;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  z-index: 4;
+  filter: brightness(50%);
+}
+
+.time_prev span {
+}
+
+@keyframes stay {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes reflect {
+  0% {
+    transform: rotateX(130deg);
+    opacity: 1;
+  }
+  45% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(7deg);
+  }
+  53% {
+    transform: rotateX(0deg);
+  }
+  56% {
+    transform: rotateX(5deg);
+  }
+  60% {
+    transform: rotateX(0deg);
+  }
+  95% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.days:nth-child(2n),
+.hours:nth-child(2n),
+.min:nth-child(2n),
+.sec:nth-child(2n) {
+  margin-right: 25px;
 }
