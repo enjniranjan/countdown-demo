@@ -3,15 +3,23 @@
   src: url(../../../assets/fonts/RedHatText-Medium.ttf) format("opentype");
 }
 
+.clock{
+  display: flex;
+  justify-content: center;
+}
+
+.time-names{
+    display: flex;
+    justify-content: center;
+    padding-left: 2%;
+
+}
+
 @media screen and (orientation: landscape) {
 
 .main_Timer {
   position: relative;
   margin: auto;
-}
-
-.clock{
-  margin-left: 33%;
 }
 
 .time {
@@ -48,17 +56,13 @@
   }
 }
 
-.time-names{
-    margin-top: 20px;
-    margin-left: 32%;
-
-}
-
 .time-info{
-  font-family: Red Hat Text;
-  color: white;
-  font-size: 14px;
-  padding: 25px;
+  color: hsl(237, 18%, 59%);
+  font-weight: 700;
+  font-family: 'Red Hat Text';
+  letter-spacing: 5px;
+  font-size:9px !important;
+padding: 18px;
 }
 
 .line_hor {
@@ -71,20 +75,18 @@
 }
 
 .perspective {
-  position: absolute;
-  perspective: 1400px;
-  perspective-origin: 10% 0;
   z-index: 5;
   margin-top: -63px;
-    margin-left : 33%;
+  display: flex;
+  justify-content: center;
 }
 
 .perspective .time_reflection {
   position: absolute;
   transform-style: preserve-3d;
   display: flex;
-    margin-left : 33%;
-
+  justify-content: center;
+  z-index: 1;
 }
 
 .time_reflection span {
@@ -94,13 +96,10 @@
 
 .time_prev {
   display: flex;
-  margin-top: -62px;
-  position: absolute;
+  justify-content: center;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
   z-index: 4;
   filter: brightness(50%);
-    margin-left : 33%;
-
 }
 
 .time_prev span {
@@ -155,10 +154,6 @@
 
 @media screen and (max-width: 768px) {
 
-  .clock{
-  margin-left: 10%;
-}
-
 .main_Timer {
   position: relative;
   margin: auto;
@@ -204,43 +199,32 @@
 }
 
 .perspective {
-  position: absolute;
-  perspective: 1400px;
-  perspective-origin: 10% 0;
   z-index: 5;
   margin-top: -28px;
-    margin-left: 10%;
-
+  display: flex;
+  justify-content: center;
 }
 
 .perspective .time_reflection {
   position: absolute;
   transform-style: preserve-3d;
   display: flex;
-    margin-left: 10%;
-
+  justify-content: center;
+  z-index: 1;
 }
 
 .time_reflection span {
   display: inline-block;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  filter: brightness(50%);
 }
 
 .time_prev {
   display: flex;
-  margin-top: -28px;
-  position: absolute;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
   z-index: 4;
   filter: brightness(50%);
-    margin-left: 10%;
-
-}
-
-.time-names{
-    margin-top: 20px;
-    margin-left: 10%;
-
+justify-content: center;
 }
 
 .mrg{
@@ -252,10 +236,12 @@
 }
 
 .time-info{
-  font-family: Red Hat Text;
-  color: white;
-  font-size: 8px;
-  padding: 15px;
+  color: hsl(237, 18%, 59%);
+  font-weight: 700;
+  font-family: 'Red Hat Text';
+  letter-spacing: 5px;
+  font-size:5px !important;
+  padding: 10px;
 }
 
 .time_prev span {
