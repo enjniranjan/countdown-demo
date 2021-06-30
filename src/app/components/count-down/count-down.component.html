@@ -4,36 +4,42 @@
     <div class="clock">
       <div class="time">
         <span class="days">{{timer[0].value}}</span>
-        <span class="days">{{timer[1].value}}</span>
-        <span class="hours">{{timer[2].value}}</span>
-        <span class="hours">{{timer[3].value}}</span>
-        <span class="min">{{timer[4].value}}</span>
-        <span class="min">{{timer[5].value}}</span>
-        <span class="sec">{{timer[6].value}}</span>
-        <span class="sec">{{timer[7].value}}</span>
+        <span class="days lrg">{{timer[1].value}}</span>
+        <span class="hours mrg">{{timer[2].value}}</span>
+        <span class="hours lrg">{{timer[3].value}}</span>
+        <span class="min mrg">{{timer[4].value}}</span>
+        <span class="min lrg">{{timer[5].value}}</span>
+        <span class="sec mrg">{{timer[6].value}}</span>
+        <span class="sec lrg">{{timer[7].value}}</span>
       </div>
     </div>
     <div class="perspective" >
       <div class="time_reflection">
-        <span class="days" [@flip]="timer[0].value">{{timer[0].value}}</span>
-        <span class="days" [@flip]="timer[1].value">{{timer[1].value}}</span>
-        <span class="hours" [@flip]="timer[2].value">{{timer[2].value}}</span>
-        <span class="hours" [@flip]="timer[3].value">{{timer[3].value}}</span>
-        <span class="min" [@flip]="timer[4].value">{{timer[4].value}}</span>
-        <span class="min" [@flip]="timer[5].value">{{timer[5].value}}</span>
-        <span class="sec" [@flip]="timer[6].value">{{timer[6].value}}</span>
-        <span class="sec" [@flip]="timer[7].value">{{timer[7].value}}</span>
+        <span class="days" [@flip]="timer[1].value">{{timer[0].value}}</span>
+        <span class="days lrg lrg" [@flip]="timer[1].value">{{timer[1].value}}</span>
+        <span class="hours mrg" [@flip]="timer[3].value">{{timer[2].value}}</span>
+        <span class="hours lrg lrg" [@flip]="timer[3].value">{{timer[3].value}}</span>
+        <span class="min mrg" [@flip]="timer[5].value">{{timer[4].value}}</span>
+        <span class="min lrg lrg" [@flip]="timer[5].value">{{timer[5].value}}</span>
+        <span class="sec mrg" [@flip]="timer[7].value">{{timer[6].value}}</span>
+        <span class="sec lrg" [@flip]="timer[7].value">{{timer[7].value}}</span>
       </div>
     </div>
     <div class="time_prev">
       <span class="days">{{timer[0].old}}</span>
-      <span class="days">{{timer[1].old}}</span>
-      <span class="hours">{{timer[2].old}}</span>
-      <span class="hours">{{timer[3].old}}</span>
-      <span class="min">{{timer[4].old}}</span>
-      <span class="min">{{timer[5].old}}</span>
-      <span class="sec">{{timer[6].old}}</span>
-      <span class="sec">{{timer[7].old}}</span>
+      <span class="days lrg">{{timer[1].old}}</span>
+      <span class="hours mrg">{{timer[2].old}}</span>
+      <span class="hours lrg">{{timer[3].old}}</span>
+      <span class="min mrg">{{timer[4].old}}</span>
+      <span class="min lrg">{{timer[5].old}}</span>
+      <span class="sec mrg">{{timer[6].old}}</span>
+      <span class="sec lrg">{{timer[7].old}}</span>
+    </div>
+    <div class="time-names">
+      <label class="time-info">Days</label>
+      <label class="time-info">Hours</label>
+      <label class="time-info">Minutes</label>
+      <label class="time-info">Seconds</label>
     </div>
     <div class="line_hor"></div>
   </div>

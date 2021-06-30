@@ -39,7 +39,7 @@ export class CountDownComponent {
   change: boolean = false;
   showShadow = [];
   name = 'Angular ' + VERSION.major;
-  initialMinutes$ = new BehaviorSubject(30);
+  initialMinutes$ = new BehaviorSubject(20160);
 
   @Input()
   set minutes(val:any) {

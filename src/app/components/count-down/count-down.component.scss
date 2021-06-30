@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Red Hat Text;
+  src: url(../../../assets/fonts/RedHatText-Medium.ttf) format("opentype");
+}
 
 @media screen and (orientation: landscape) {
 
@@ -14,13 +18,20 @@
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 
+.mrg{
+  margin-left: 10px;
+}
+
+.lrg{
+  margin-left: -15px;
+}
+
 .time span,
 .time_reflection span,
 .time_prev span {
   color: hsl(345, 95%, 68%);
   font-size: 50px;
   background-color: #252525;
-  border-radius: 10px;
   padding: 5px 10px 0px 10px;
   transition: 0.4s;
   text-align: center;
@@ -37,11 +48,24 @@
   }
 }
 
+.time-names{
+    margin-top: 20px;
+    margin-left: 32%;
+
+}
+
+.time-info{
+  font-family: Red Hat Text;
+  color: white;
+  font-size: 14px;
+  padding: 25px;
+}
+
 .line_hor {
   position: absolute;
   width: 650px;
   height: 2px;
-  margin-top: -72px;
+  margin-top: -71px;
   z-index: 10;
   margin-left : 33%;
 }
@@ -132,7 +156,7 @@
 @media screen and (max-width: 768px) {
 
   .clock{
-  margin-left: 13%;
+  margin-left: 10%;
 }
 
 .main_Timer {
@@ -150,11 +174,14 @@
   color: hsl(345, 95%, 68%);
   font-size: 20px;
   background-color: #252525;
-  border-radius: 10px;
   padding: 5px 10px 0px 10px;
   transition: 0.4s;
   text-align: center;
   margin-right: 3px;
+}
+
+.mrg{
+  margin-left: 2px;
 }
 
 @keyframes time {
@@ -173,7 +200,7 @@
   height: 2px;
   margin-top: -72px;
   z-index: 10;
-    margin-left: 13%;
+    margin-left: 10%;
 }
 
 .perspective {
@@ -182,7 +209,7 @@
   perspective-origin: 10% 0;
   z-index: 5;
   margin-top: -28px;
-    margin-left: 13%;
+    margin-left: 10%;
 
 }
 
@@ -190,7 +217,7 @@
   position: absolute;
   transform-style: preserve-3d;
   display: flex;
-    margin-left: 13%;
+    margin-left: 10%;
 
 }
 
@@ -206,8 +233,29 @@
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
   z-index: 4;
   filter: brightness(50%);
-    margin-left: 13%;
+    margin-left: 10%;
 
+}
+
+.time-names{
+    margin-top: 20px;
+    margin-left: 10%;
+
+}
+
+.mrg{
+  margin-left: 5px;
+}
+
+.lrg{
+  margin-left: -12px;
+}
+
+.time-info{
+  font-family: Red Hat Text;
+  color: white;
+  font-size: 8px;
+  padding: 15px;
 }
 
 .time_prev span {
