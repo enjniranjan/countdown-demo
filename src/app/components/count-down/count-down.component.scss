@@ -1,6 +1,13 @@
+
+@media screen and (orientation: landscape) {
+
 .main_Timer {
   position: relative;
   margin: auto;
+}
+
+.clock{
+  margin-left: 33%;
 }
 
 .time {
@@ -11,7 +18,7 @@
 .time_reflection span,
 .time_prev span {
   color: hsl(345, 95%, 68%);
-  font-size: 120px;
+  font-size: 50px;
   background-color: #252525;
   border-radius: 10px;
   padding: 5px 10px 0px 10px;
@@ -36,6 +43,7 @@
   height: 2px;
   margin-top: -72px;
   z-index: 10;
+  margin-left : 33%;
 }
 
 .perspective {
@@ -43,13 +51,16 @@
   perspective: 1400px;
   perspective-origin: 10% 0;
   z-index: 5;
-  margin-top: -143px;
+  margin-top: -63px;
+    margin-left : 33%;
 }
 
 .perspective .time_reflection {
   position: absolute;
   transform-style: preserve-3d;
   display: flex;
+    margin-left : 33%;
+
 }
 
 .time_reflection span {
@@ -59,11 +70,13 @@
 
 .time_prev {
   display: flex;
-  margin-top: -143px;
+  margin-top: -62px;
   position: absolute;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
   z-index: 4;
   filter: brightness(50%);
+    margin-left : 33%;
+
 }
 
 .time_prev span {
@@ -114,14 +127,135 @@
   color:hsl(345, 95%, 68%);
 }
 
-.header{
+}
+
+@media screen and (max-width: 768px) {
+
+  .clock{
+  margin-left: 13%;
+}
+
+.main_Timer {
+  position: relative;
   margin: auto;
-  width:100%;
-  max-width: 100%;
-  height: auto;
-  align-items: center;
-  font-size: 14px;
-  background-image: url("../../../assets/images/bg-stars.svg");
-  background-color: currentColor;
+}
+
+.time {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.time span,
+.time_reflection span,
+.time_prev span {
+  color: hsl(345, 95%, 68%);
+  font-size: 20px;
+  background-color: #252525;
+  border-radius: 10px;
+  padding: 5px 10px 0px 10px;
+  transition: 0.4s;
+  text-align: center;
+  margin-right: 3px;
+}
+
+@keyframes time {
+  0% {
+    filter: brightness(70%);
+  }
+  90%,
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+.line_hor {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  margin-top: -72px;
+  z-index: 10;
+    margin-left: 13%;
+}
+
+.perspective {
+  position: absolute;
+  perspective: 1400px;
+  perspective-origin: 10% 0;
+  z-index: 5;
+  margin-top: -28px;
+    margin-left: 13%;
+
+}
+
+.perspective .time_reflection {
+  position: absolute;
+  transform-style: preserve-3d;
+  display: flex;
+    margin-left: 13%;
+
+}
+
+.time_reflection span {
+  display: inline-block;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.time_prev {
+  display: flex;
+  margin-top: -28px;
+  position: absolute;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  z-index: 4;
+  filter: brightness(50%);
+    margin-left: 13%;
+
+}
+
+.time_prev span {
+}
+
+@keyframes stay {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes reflect {
+  0% {
+    transform: rotateX(130deg);
+    opacity: 1;
+  }
+  45% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(7deg);
+  }
+  53% {
+    transform: rotateX(0deg);
+  }
+  56% {
+    transform: rotateX(5deg);
+  }
+  60% {
+    transform: rotateX(0deg);
+  }
+  95% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.days:nth-child(2n),
+.hours:nth-child(2n),
+.min:nth-child(2n),
+.sec:nth-child(2n) {
+  margin-right: 25px;
+  color:hsl(345, 95%, 68%);
+}
 
 }

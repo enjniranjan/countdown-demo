@@ -1,7 +1,7 @@
 <ng-container *ngIf="timer$ |async as timer">
   <div>
-  <div class="main_Timer header">
-    <div class="clock" style="margin-left : 25%;">
+  <div class="main_Timer">
+    <div class="clock">
       <div class="time">
         <span class="days">{{timer[0].value}}</span>
         <span class="days">{{timer[1].value}}</span>
@@ -13,7 +13,7 @@
         <span class="sec">{{timer[7].value}}</span>
       </div>
     </div>
-    <div class="perspective" style="margin-left : 25%;" >
+    <div class="perspective" >
       <div class="time_reflection">
         <span class="days" [@flip]="timer[0].value">{{timer[0].value}}</span>
         <span class="days" [@flip]="timer[1].value">{{timer[1].value}}</span>
@@ -25,7 +25,7 @@
         <span class="sec" [@flip]="timer[7].value">{{timer[7].value}}</span>
       </div>
     </div>
-    <div class="time_prev" style="margin-left : 25%;">
+    <div class="time_prev">
       <span class="days">{{timer[0].old}}</span>
       <span class="days">{{timer[1].old}}</span>
       <span class="hours">{{timer[2].old}}</span>
@@ -35,7 +35,7 @@
       <span class="sec">{{timer[6].old}}</span>
       <span class="sec">{{timer[7].old}}</span>
     </div>
-    <div class="line_hor" style="margin-left : 25%;"></div>
+    <div class="line_hor"></div>
   </div>
 </div>
 </ng-container>

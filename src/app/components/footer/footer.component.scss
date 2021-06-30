@@ -6,7 +6,12 @@
 	align-items: center;
 	font-size: 14px;
 	background-image: url("../../../assets/images/pattern-hills.svg");
+	background-repeat: repeat-x ;
 	background-color: currentColor;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	text-align: center;
 
 }
 
@@ -19,6 +24,13 @@
 		margin-top:10%;
 
 	padding: 15px;
+}
+
+iconback{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	text-align: center;
 }
 
 .title{
