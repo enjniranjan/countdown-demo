@@ -1,7 +1,8 @@
 .footer{
 	margin:auto;
-	width:1440px;
-	height: 200px;
+	width:100%;
+	max-width:100%;
+	height: auto;
 	align-items: center;
 	font-size: 14px;
 	background-image: url("../../../assets/images/pattern-hills.svg");
@@ -18,4 +19,20 @@
 		margin-top:10%;
 
 	padding: 15px;
+}
+
+.title{
+  color: white;
+  font-weight: 700;
+  font-family: 'Red Hat Text';
+  letter-spacing: 5px;
+  font-size:14px !important;
+
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }

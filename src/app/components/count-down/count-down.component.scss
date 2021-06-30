@@ -116,8 +116,9 @@
 
 .header{
   margin: auto;
-  width:1440px;
-  height: 200px;
+  width:100%;
+  max-width: 100%;
+  height: auto;
   align-items: center;
   font-size: 14px;
   background-image: url("../../../assets/images/bg-stars.svg");

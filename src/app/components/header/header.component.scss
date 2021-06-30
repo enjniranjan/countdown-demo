@@ -3,23 +3,15 @@
   src: url(../../../assets/fonts/RedHatText-Medium.ttf) format("opentype");
 }
 
-@media screen and (max-width: 375px) {
-  header {
-    display: none;
-  }
-}
-
-@media screen and (orientation: landscape) {
-
 .header{
   margin: auto;
-  width:1440px;
-  height: 200px;
+  width:100%;
+  height: auto;
+  max-width: 100%;
   align-items: center;
   font-size: 14px;
   background-image: url("../../../assets/images/bg-stars.svg");
   background-color: currentColor;
-}
 }
 
 .title{
