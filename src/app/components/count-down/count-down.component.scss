@@ -42,7 +42,7 @@
 .time_prev span {
   color: hsl(345, 95%, 68%);
   font-size: 50px;
-  background-color: hsl(235, 16%, 14%);
+  background-color: hsl(236, 21%, 26%);
   padding: 5px 10px 0px 10px;
   transition: 0.4s;
   text-align: center;
@@ -166,7 +166,7 @@ padding: 18px;
 .time_prev span {
   color: hsl(345, 95%, 68%);
   font-size: 20px;
-  background-color: hsl(235, 16%, 14%);
+  background-color: hsl(236, 21%, 26%);
   padding: 5px 10px 0px 10px;
   transition: 0.4s;
   text-align: center;
@@ -214,7 +214,6 @@ padding: 18px;
 .time_reflection span {
   display: inline-block;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-  filter: brightness(50%);
 }
 
 .time_prev {
@@ -237,9 +236,9 @@ justify-content: center;
   color: hsl(237, 18%, 59%);
   font-weight: 700;
   font-family: 'Red Hat Text';
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   font-size:5px !important;
-  padding: 10px;
+  padding: 7px;
 }
 
 .time_prev span {

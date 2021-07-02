@@ -7,17 +7,12 @@
 	font-size: 14px;
 	background-image: url("../../../assets/images/pattern-hills.svg");
 	background-repeat: repeat-x ;
-	background-color: currentColor;
+	background-color: #0e0912;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	text-align: center;
 
-}
-
-.iconac{
-		align-items: center;
-		margin-left:45% ;
 }
 
 .iconar{
@@ -26,11 +21,14 @@
 	padding: 15px;
 }
 
-iconback{
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	text-align: center;
+.ic{
+	padding: 5px;
+	color: white;
+	margin-bottom: 2%;
+}
+
+.ic:hover{
+	color:hsl(345, 95%, 68%);
 }
 
 .title{
@@ -47,4 +45,12 @@ iconback{
   justify-content: center;
   align-items: center;
   height: 200px;
+}
+
+.fb-icon{
+    background:none;
+}
+
+.fb-icon:hover{
+    background:hsl(345, 95%, 68%);
 }
